@@ -23,7 +23,7 @@ def extract_sources(response) -> list[ResearchSource]:
         if action.get("type") != "search":
             continue
 
-        source_items = action.get("sources", [])
+        source_items = action.get("sources") or []
 
         for source in source_items:
             url = source.get("url", "").strip()
@@ -37,7 +37,7 @@ def extract_sources(response) -> list[ResearchSource]:
             seen_urls.add(url)
 
             sources.append(
-                ResearchSource(
+                create_research_source(
                     url=url
                 )
             )
@@ -137,17 +137,17 @@ def research_topic(
         search_response
     )
 
-    print(
-        f"웹 검색 결과: "
-        f"{len(sources)}개 고유 출처 수집"
-    )
+    # print(
+    #     f"웹 검색 결과: "
+    #     f"{len(sources)}개 고유 출처 수집"
+    # )
     
-    for source in sources[:10]:
-        print(
-            f"[P{source.priority}] "
-            f"{source.source_type:<10}"
-            f"{source.domain}"
-        )
+    # for source in sources[:10]:
+    #     print(
+    #         f"[P{source.priority}] "
+    #         f"{source.source_type:<10}"
+    #         f"{source.domain}"
+    #     )
 
     return structure_research_data(
         client=client,

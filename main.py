@@ -177,7 +177,7 @@ def main() -> None:
         f"({len(research_data.sources)}개 출처 확인)"
     )
     
-    print_research_data(research_data)
+    # print_research_data(research_data)
     
     content_plan = create_content_plan(
         client = client,
