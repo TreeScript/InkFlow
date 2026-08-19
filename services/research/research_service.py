@@ -2,8 +2,8 @@ from openai import OpenAI
 
 from config.settings import OPENAI_MODEL
 from models.research import ResearchData, ResearchSource
-from prompts.research_prompt import build_research_prompt
-from services.source_service import (create_research_source, sort_sources)
+from prompts.research import build_research_prompt
+from .source_service import (create_research_source, sort_sources)
 
 
 def extract_sources(response) -> list[ResearchSource]:

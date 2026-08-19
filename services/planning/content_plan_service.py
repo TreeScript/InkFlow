@@ -1,9 +1,9 @@
 from openai import OpenAI
 
 from config.settings import OPENAI_MODEL
-from models.content_plan import ContentPlan
+from models.planning import ContentPlan
 from models.research import ResearchData
-from prompts.content_plan_prompt import build_content_plan_prompt
+from prompts.planning import build_content_plan_prompt
 
 def create_content_plan(client: OpenAI, topic: str, research_data: ResearchData) -> ContentPlan:
     prompt = build_content_plan_prompt(

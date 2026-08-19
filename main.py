@@ -1,8 +1,7 @@
-from models.blog_post import BlogPost
-from models.content_block import ContentBlock
-from services.research_service import research_topic
-from services.openai_service import create_openai_client, generate_blog_post
-from services.content_plan_service import create_content_plan
+from models.blog import BlogPost, ContentBlock
+from services.ai import create_openai_client, generate_blog_post
+from services.planning import create_content_plan
+from services.research import research_topic
 
 
 def get_topic() -> str:

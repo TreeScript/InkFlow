@@ -1,5 +1,5 @@
 from urllib.parse import urlparse
-from models.research import ResearchSource
+from models.research.research import ResearchSource
 
 GOVERNMENT_DOMAINS = (
     ".go.kr",

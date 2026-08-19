@@ -1,5 +1,5 @@
-from models.content_plan import ContentPlan
 from models.research import ResearchData
+from models.planning import ContentPlan
 
 
 def build_blog_prompt(

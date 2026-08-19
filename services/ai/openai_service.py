@@ -1,10 +1,10 @@
 from openai import OpenAI
 
 from config.settings import OPENAI_MODEL, get_openai_api_key
-from models.blog_post import BlogPost
-from models.content_plan import ContentPlan
+from models.blog import BlogPost
+from models.planning import ContentPlan
 from models.research import ResearchData
-from prompts.blog_prompt import build_blog_prompt
+from prompts.blog import build_blog_prompt
 
 
 def create_openai_client() -> OpenAI:

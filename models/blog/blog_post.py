@@ -1,6 +1,5 @@
 from pydantic import BaseModel, Field
-
-from models.content_block import ContentBlock
+from .content_block import ContentBlock
 
 
 class BlogPost(BaseModel):
