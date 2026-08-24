@@ -2,7 +2,7 @@ from .auth_service import (
     ensure_naver_login,
     input_naver_account,
     login_naver,
-    is_logged_in
+    is_logged_in,
 )
 from .browser_service import create_browser_context
 from .editor_service import (
@@ -10,7 +10,12 @@ from .editor_service import (
     open_blog_editor,
     get_blog_editor_frame,
     get_title_locator,
-    input_blog_title
+    input_blog_title,
+    get_body_locator,
+    input_body_text,
+    select_paragraph_style,
+    input_heading_block
+    
 )
 
 __all__ = [
@@ -23,5 +28,9 @@ __all__ = [
     "open_blog_editor",
     "get_blog_editor_frame",
     "get_title_locator",
-    "input_blog_title"
+    "input_blog_title",
+    "get_body_locator",
+    "input_body_text"
+    "select_paragraph_style",
+    "input_heading_block"
 ]
